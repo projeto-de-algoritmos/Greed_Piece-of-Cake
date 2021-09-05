@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'add_screen.dart';
 
 class ListScreen extends StatefulWidget {
   const ListScreen({Key? key}) : super(key: key);
@@ -35,7 +36,8 @@ class _ListScreenState extends State<ListScreen> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          print("Clicou");
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => AddScreen()));
         },
       ),
     );
