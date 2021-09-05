@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'list_screen.dart';
+import 'list/list_screen.dart';
 
 void main() {
   runApp(MyApp());

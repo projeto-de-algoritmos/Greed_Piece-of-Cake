@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:piece_of_cake/add/add_screen.dart';
+import '../add/add_screen.dart';
 
 class ListScreen extends StatefulWidget {
   const ListScreen({Key? key}) : super(key: key);
