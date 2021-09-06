@@ -154,6 +154,12 @@ class ListWidgetController {
       );
     }
 
+    for (int i = 0; i < lstOrders.length; i++) {
+      lstOrders[i] = lstOrders[i].copyWith(
+        isMaxLatness: false,
+      );
+    }
+
     if (maxLateness != -1) {
       lstOrders[maxLateness] = lstOrders[maxLateness].copyWith(
         isMaxLatness: true,
