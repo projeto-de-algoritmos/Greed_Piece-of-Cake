@@ -14,17 +14,17 @@ class ListWidget extends StatefulWidget {
 class _ListWidgetState extends State<ListWidget> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: ValueListenableBuilder<List<OrderModel>>(
-          valueListenable: widget.controller.ordersNotifier,
-          builder: (_, orders, __) => Column(
-                children: orders
-                    .map((e) => ListTileWidget(
-                          order: e,
-                          controller: widget.controller
-                        ))
-                    .toList(),
-              )),
+    return Expanded(
+      child: SingleChildScrollView(
+        child: ValueListenableBuilder<List<OrderModel>>(
+            valueListenable: widget.controller.ordersNotifier,
+            builder: (_, orders, __) => Column(
+                  children: orders
+                      .map((e) => ListTileWidget(
+                          order: e, controller: widget.controller))
+                      .toList(),
+                )),
+      ),
     );
   }
 }
