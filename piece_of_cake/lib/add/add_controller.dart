@@ -46,7 +46,7 @@ class AddController {
         return "Insira um ano igual ou maior a ${c_year}";
       else if (date[2] == c_year) {
         if (date[1] < c_month)
-          return "Insira um ano igual ou maior a ${c_month}";
+          return "Insira um mês igual ou maior a ${c_month}";
         else if (date[1] == c_month) {
           if (date[0] < c_day)
             return "Insira um dia igual ou maior a ${c_day}";

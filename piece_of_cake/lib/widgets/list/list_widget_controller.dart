@@ -60,7 +60,6 @@ class ListWidgetController {
     date[2] = temp;
 
     return date.join("/") + " " + time.join(":");
-    ;
   }
 
   int formatToInt(String data) {
