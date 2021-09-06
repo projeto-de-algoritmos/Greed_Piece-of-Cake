@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piece_of_cake/add/add_controller.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
-import 'package:piece_of_cake/list_screen.dart';
+import 'package:piece_of_cake/list/list_screen.dart';
 
 class AddScreen extends StatefulWidget {
   const AddScreen({Key? key}) : super(key: key);
@@ -14,7 +14,6 @@ class _AddScreenState extends State<AddScreen> {
   final controller = AddController();
 
   final dateInputController = MaskedTextController(mask: "00/00/0000 00:00");
-  // final hourInputController = MaskedTextController(mask: "00:00");
   final durationInputController = MaskedTextController(mask: "00:00");
 
   Widget build(BuildContext context) {
@@ -47,9 +46,10 @@ class _AddScreenState extends State<AddScreen> {
                     controller: durationInputController,
                     validator: controller.validateDuration,
                     keyboardType: TextInputType.number,
+                    maxLength: 5,
                     decoration: InputDecoration(
                         labelText: 'Duração do trabalho',
-                        hintText: 'Ex: 01h00m'),
+                        hintText: 'Ex: hh:mm'),
                   ),
                   TextFormField(
                     onChanged: (value) {
@@ -58,9 +58,10 @@ class _AddScreenState extends State<AddScreen> {
                     controller: dateInputController,
                     validator: controller.validateDeadlineDate,
                     keyboardType: TextInputType.number,
+                    maxLength: 16,
                     decoration: InputDecoration(
                         labelText: 'Data da entrega',
-                        hintText: 'Ex: dd/mm/aaaa 00:00'),
+                        hintText: 'Ex: dd/mm/aaaa hh:mm'),
                   ),
                 ],
               ),

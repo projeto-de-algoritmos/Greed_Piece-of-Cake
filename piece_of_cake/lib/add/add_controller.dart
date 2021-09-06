@@ -16,8 +16,6 @@ class AddController {
       return "O nome não pode ser vazio";
     else {
       List<String> lst = value.split(":");
-      // if (int.parse(lst[0]) > 23 || int.parse(lst[0]) < 0)
-      // return "Insira uma hora entre 00 e 23";
       if (int.parse(lst[1]) > 59 || int.parse(lst[1]) < 0)
         return "Insira um minuto entre 00 e 59";
     }
@@ -43,7 +41,7 @@ class AddController {
       int c_minute = DateTime.now().minute;
 
       if (date[0] > 31 || date[0] < 1) return "Insira um dia entre 01 e 31";
-      // if (date[1] > 12 || date[1] < 1) return "Insira um mês entre 01 e 12";
+      if (date[1] > 12 || date[1] < 1) return "Insira um mês entre 01 e 12";
 
       if (time[0] > 23 || time[0] < 0) return "Insira uma hora entre 23 e 00";
       if (time[1] > 59 || time[1] < 0) return "Insira um minuto entre 59 e 00";
@@ -67,20 +65,7 @@ class AddController {
     }
   }
 
-// 1234567890123456
-// 00/00/0000 00:00
-
   void onChanged({String? name, String? duration, String? deadline}) {
-    // if (deadline != null && deadline.length == 16) {
-    //   List<dynamic> lst = deadline.split(" ");
-    //   List date = lst[0].split("/");
-    //   List time = lst[1].split(":");
-
-    //   // ano/mes/dia/hora/min
-
-    //   deadline = '${date.join()}${time.join()}';
-    //   print('TESTE: ${deadline}');
-    // }
     model = model.copyWith(
       name: name,
       duration: duration,

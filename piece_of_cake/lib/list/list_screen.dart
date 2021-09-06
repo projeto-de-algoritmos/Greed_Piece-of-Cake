@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:piece_of_cake/widgets/list/list_widget.dart';
+import 'package:piece_of_cake/widgets/list/list_widget_controller.dart';
 import '../add/add_screen.dart';
 
 class ListScreen extends StatefulWidget {
@@ -9,6 +11,7 @@ class ListScreen extends StatefulWidget {
 }
 
 class _ListScreenState extends State<ListScreen> {
+  final controller = ListWidgetController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +34,9 @@ class _ListScreenState extends State<ListScreen> {
           ),
         ),
         //Aqui entra a lista de encomentdas
-        Container()
+        ListWidget(
+          controller: controller,
+        ),
       ]),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
