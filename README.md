@@ -10,22 +10,19 @@
 | 18/0125770  |  Lucas Gabriel Bezerra |
 
 ## Sobre 
-O Piece of Cake é uma aplicação Mobile / Web que tem como objetivo organizar os pedidos de uma confeitaria utilizando o algoritmo de "Scheduling to Minimize Lateness" para que os bolos sejam entregues com um atraso máximo menor possível.
+O Piece of Cake é uma aplicação Mobile e Web que tem como objetivo organizar os pedidos de uma confeitaria utilizando o algoritmo de "Scheduling to Minimize Lateness" para que os bolos sejam entregues com um atraso máximo menor possível.
+
+[Clique aqui para usar a versão Web](https://projeto-de-algoritmos.github.io/Greed_Piece-of-Cake/#/)
 
 ## Screenshots
-
-![](https://i.imgur.com/)
-
-![](https://i.imgur.com/)
-
-![](https://i.imgur.com/)
-
-![](https://i.imgur.com/)
+![](https://i.imgur.com/3kZJf5f.jpg)
+![](https://i.imgur.com/ywKy31W.png)
+![](https://i.imgur.com/CJgk8wo.png)
 
 ## Instalação 
 **Linguagem**: Dart <br>
 **Framework**: Flutter <br>
-Baixe o arquivo .apk presente na seção release em um aparelho Android para rodar a aplicação em seu dispositivo móvel ou acesse o link para usar a versão Web
+Baixe o [arquivo .apk](https://github.com/projeto-de-algoritmos/Greed_Piece-of-Cake/releases/tag/apk) presente na seção release em um aparelho Android para rodar a aplicação em seu dispositivo móvel ou acesse o [link](https://projeto-de-algoritmos.github.io/Greed_Piece-of-Cake/#/) para usar a versão Web.
 
 ## Uso 
 A partir da tela inicial:
