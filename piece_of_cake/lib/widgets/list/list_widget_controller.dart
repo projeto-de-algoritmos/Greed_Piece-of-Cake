@@ -24,4 +24,17 @@ class ListWidgetController {
       orders = <OrderModel>[];
     }
   }
+  Future<void> removeOrder(OrderModel order) async{
+    
+      try {
+        orders.removeWhere((element) => element == order);
+        final instance = await SharedPreferences.getInstance();
+        List<String> strOrders = orders.map((e) => e.toJson()).toList();
+        await instance.setStringList("orders", strOrders);
+      } catch (e) {
+        print("Error..");
+        return;
+      }
+    
+  }
 }

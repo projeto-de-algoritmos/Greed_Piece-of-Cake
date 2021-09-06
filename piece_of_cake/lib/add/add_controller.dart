@@ -10,10 +10,8 @@ class AddController {
       value?.isEmpty ?? true ? "O nome não pode ser vazio" : null;
 
   String? validateDuration(String? value) {
-    if (value == null) return "O nome não pode ser vazio";
-
-    if (value.isEmpty)
-      return "O nome não pode ser vazio";
+    if (value == null || value.isEmpty || value.length < 5)
+      return "O campo não pode ser vazio ou incompleto";
     else {
       List<String> lst = value.split(":");
       if (int.parse(lst[1]) > 59 || int.parse(lst[1]) < 0)
@@ -22,10 +20,8 @@ class AddController {
   }
 
   String? validateDeadlineDate(String? value) {
-    if (value == null) return "O nome não pode ser vazio";
-
-    if (value.isEmpty)
-      return "O nome não pode ser vazio";
+    if (value == null || value.isEmpty || value.length < 16)
+      return "O campo não pode ser vazio ou incompleto";
     else {
       List<dynamic> lst = value.split(" ");
       List date = lst[0].split("/");
@@ -78,16 +74,17 @@ class AddController {
 
     final orders = instance.getStringList("orders") ?? <String>[];
     orders.add(model.toJson());
-    print("passou");
     print('SAVE: ${orders.length}');
     await instance.setStringList("orders", orders);
     return;
   }
 
-  Future<void> registerOrder() async {
+  Future<bool> registerOrder() async {
     final form = formKey.currentState;
     if (form!.validate()) {
-      return await saveOrder();
+      await saveOrder();
+      return true;
     }
+    return false;
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piece_of_cake/order_model.dart';
 import 'package:piece_of_cake/widgets/list/list_widget_controller.dart';
-import 'package:piece_of_cake/widgets/tile/list_tile_widget.dart';
+import 'package:piece_of_cake/widgets/list/list_tile_widget.dart';
 
 class ListWidget extends StatefulWidget {
   final ListWidgetController controller;
@@ -21,6 +21,7 @@ class _ListWidgetState extends State<ListWidget> {
                 children: orders
                     .map((e) => ListTileWidget(
                           order: e,
+                          controller: widget.controller
                         ))
                     .toList(),
               )),

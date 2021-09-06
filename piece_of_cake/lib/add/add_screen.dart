@@ -86,7 +86,8 @@ class _AddScreenState extends State<AddScreen> {
                     Expanded(
                         child: TextButton(
                             onPressed: () async {
-                              await controller.registerOrder();
+                              bool valid = await controller.registerOrder();
+                              if(valid)
                               Navigator.of(context).pushAndRemoveUntil(
                                   MaterialPageRoute(
                                       builder: (context) => ListScreen()),
