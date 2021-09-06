@@ -54,7 +54,7 @@ class AddController {
             if (time[0] < c_hour)
               return "Insira uma hora igual ou maior a ${c_hour}";
             else if (time[0] == c_hour) if (time[1] < c_minute)
-              return "Insira um minute igual ou maior a ${c_minute}";
+              return "Insira um minuto igual ou maior a ${c_minute}";
           }
         }
       }

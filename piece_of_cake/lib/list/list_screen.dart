@@ -25,7 +25,7 @@ class _ListScreenState extends State<ListScreen> {
           child: Container(
             alignment: Alignment.center,
             child: Text(
-              "Lista de encomendas",
+              "Lista de Encomendas",
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,

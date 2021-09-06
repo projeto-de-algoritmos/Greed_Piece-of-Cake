@@ -61,9 +61,11 @@ class _ListTileWidgetState extends State<ListTileWidget> {
             child: ListTile(
               contentPadding: EdgeInsets.zero,
               title: Text(widget.order.name!),
-              subtitle: Text('Atraso: ${widget.order.lateness!}'),
+              subtitle: (widget.order.lateness![0] == "-")
+                  ? Text('Atrasado: ${widget.order.lateness!.substring(1)}')
+                  : Text("Adiantado: ${widget.order.lateness!}"),
               trailing: Text(
-                  'Inicio: ${widget.order.start!}\nFim: ${widget.order.end}'),
+                  'Prazo de Entrega:   ${widget.order.deadline!}\nInício do Preparo:   ${widget.order.start!}\nFim do Preparo:      ${widget.order.end}'),
             ),
           ),
           Divider(

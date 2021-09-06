@@ -60,7 +60,7 @@ class _AddScreenState extends State<AddScreen> {
                     keyboardType: TextInputType.number,
                     maxLength: 16,
                     decoration: InputDecoration(
-                        labelText: 'Data da entrega',
+                        labelText: 'Prazo de entrega',
                         hintText: 'Ex: dd/mm/aaaa hh:mm'),
                   ),
                 ],
@@ -87,11 +87,11 @@ class _AddScreenState extends State<AddScreen> {
                         child: TextButton(
                             onPressed: () async {
                               bool valid = await controller.registerOrder();
-                              if(valid)
-                              Navigator.of(context).pushAndRemoveUntil(
-                                  MaterialPageRoute(
-                                      builder: (context) => ListScreen()),
-                                  (Route<dynamic> route) => false);
+                              if (valid)
+                                Navigator.of(context).pushAndRemoveUntil(
+                                    MaterialPageRoute(
+                                        builder: (context) => ListScreen()),
+                                    (Route<dynamic> route) => false);
                             },
                             child: Text("Enviar",
                                 style: TextStyle(color: Colors.white)),
