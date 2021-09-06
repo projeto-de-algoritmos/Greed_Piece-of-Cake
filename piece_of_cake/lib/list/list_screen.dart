@@ -12,6 +12,8 @@ class ListScreen extends StatefulWidget {
 
 class _ListScreenState extends State<ListScreen> {
   final controller = ListWidgetController();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +35,24 @@ class _ListScreenState extends State<ListScreen> {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 60),
+          child: Text(
+            'Arraste para a esquerda ou para a direita para apagar uma encomenda',
+            style: TextStyle(color: Colors.grey),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+          child: Text(
+            'A tarefa com o maior atraso será sinalizada com um plano de fundo vermelho',
+            style: TextStyle(color: Colors.red[200]),
+            textAlign: TextAlign.center,
+          ),
+        ),
+
+        // Flexible(),
         //Aqui entra a lista de encomentdas
         ListWidget(
           controller: controller,

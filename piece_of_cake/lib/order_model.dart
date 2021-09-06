@@ -7,6 +7,7 @@ class OrderModel {
   final String? start;
   final String? end;
   final String? lateness;
+  final bool isMaxLatness;
   OrderModel({
     this.name,
     this.duration,
@@ -14,6 +15,7 @@ class OrderModel {
     this.start,
     this.end,
     this.lateness,
+    this.isMaxLatness = false,
   });
 
   OrderModel copyWith({
@@ -23,6 +25,7 @@ class OrderModel {
     String? start,
     String? end,
     String? lateness,
+    bool? isMaxLatness,
   }) {
     return OrderModel(
       name: name ?? this.name,
@@ -31,6 +34,7 @@ class OrderModel {
       start: start ?? this.start,
       end: end ?? this.end,
       lateness: lateness ?? this.lateness,
+      isMaxLatness: isMaxLatness ?? this.isMaxLatness,
     );
   }
 
@@ -42,6 +46,7 @@ class OrderModel {
       'start': start,
       'end': end,
       'lateness': lateness,
+      'isMaxLatness': isMaxLatness,
     };
   }
 
@@ -53,6 +58,7 @@ class OrderModel {
       start: map['start'],
       end: map['end'],
       lateness: map['lateness'],
+      isMaxLatness: map['isMaxLatness'],
     );
   }
 
@@ -63,7 +69,7 @@ class OrderModel {
 
   @override
   String toString() {
-    return 'OrderModel(name: $name, duration: $duration, deadline: $deadline, start: $start, end: $end, lateness: $lateness)';
+    return 'OrderModel(name: $name, duration: $duration, deadline: $deadline, start: $start, end: $end, lateness: $lateness, isMaxLatness: $isMaxLatness)';
   }
 
   @override
@@ -76,7 +82,8 @@ class OrderModel {
         other.deadline == deadline &&
         other.start == start &&
         other.end == end &&
-        other.lateness == lateness;
+        other.lateness == lateness &&
+        other.isMaxLatness == isMaxLatness;
   }
 
   @override
@@ -86,6 +93,7 @@ class OrderModel {
         deadline.hashCode ^
         start.hashCode ^
         end.hashCode ^
-        lateness.hashCode;
+        lateness.hashCode ^
+        isMaxLatness.hashCode;
   }
 }

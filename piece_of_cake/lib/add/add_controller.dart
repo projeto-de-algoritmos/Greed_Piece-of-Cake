@@ -61,24 +61,7 @@ class AddController {
     }
   }
 
-  // String format(String data) {
-  //   var lst = data.split(" ");
-  //   List date = lst[0].split("/");
-  //   List time = lst[1].split(":");
-
-  //   var temp = date[0];
-  //   date[0] = date[2];
-  //   date[2] = temp;
-  //   data = date.join("-") + " " + time.join(":");
-
-  //   return data;
-  // }
-
   void onChanged({String? name, String? duration, String? deadline}) {
-    // if (deadline != null) {
-    //   if (deadline.length == 16) deadline = format(deadline);
-    // }
-
     model = model.copyWith(
       name: name,
       duration: duration,
@@ -91,7 +74,6 @@ class AddController {
 
     final orders = instance.getStringList("orders") ?? <String>[];
     orders.add(model.toJson());
-    print('SAVE: ${orders.length}');
     await instance.setStringList("orders", orders);
     return;
   }

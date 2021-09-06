@@ -58,14 +58,39 @@ class _ListTileWidgetState extends State<ListTileWidget> {
               ));
               await widget.controller.getOrders();
             },
-            child: ListTile(
-              contentPadding: EdgeInsets.zero,
-              title: Text(widget.order.name!),
-              subtitle: (widget.order.lateness![0] == "-")
-                  ? Text('Atrasado: ${widget.order.lateness!.substring(1)}')
-                  : Text("Adiantado: ${widget.order.lateness!}"),
-              trailing: Text(
-                  'Prazo de Entrega:   ${widget.order.deadline!}\nInício do Preparo:   ${widget.order.start!}\nFim do Preparo:      ${widget.order.end}'),
+            child: Container(
+              color: widget.order.isMaxLatness
+                  ? Colors.red[100]
+                  : Colors.grey[200],
+              child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                title: Text(
+                  widget.order.name!,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 15,
+                  ),
+                ),
+                subtitle: (widget.order.lateness![0] == "-")
+                    ? Text(
+                        'Atrasado: ${widget.order.lateness!.substring(1).split(":").join("h")}m',
+                        style: TextStyle(color: Colors.red))
+                    : Text(
+                        "Adiantado: ${widget.order.lateness!.split(":").join("h")}m",
+                        style: TextStyle(color: Colors.green[800])),
+                trailing: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Entrega:  ${widget.order.deadline!}',
+                      style: TextStyle(color: Colors.blue[800]),
+                    ),
+                    Text('Início:      ${widget.order.start!}'),
+                    Text('Término: ${widget.order.end}')
+                  ],
+                ),
+              ),
             ),
           ),
           Divider(
@@ -77,9 +102,4 @@ class _ListTileWidgetState extends State<ListTileWidget> {
   }
 }
 
-/*
-Indice (opcional)
-Nome
-Inicio - Fim
-Atraso
-*/
+
