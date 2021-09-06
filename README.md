@@ -1,44 +1,39 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Piece of Cake
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 3<br>
+**Conteúdo da Disciplina**: Greedbr>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0113585  |  Hugo Ricardo Souza Bezerra |
+| 18/0125770  |  Lucas Gabriel Bezerra |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O Piece of Cake é uma aplicação Mobile / Web que tem como objetivo organizar os pedidos de uma confeitaria utilizando o algoritmo de "Scheduling to Minimize Lateness" para que os bolos sejam entregues com um atraso máximo menor possível.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![](https://i.imgur.com/)
+
+![](https://i.imgur.com/)
+
+![](https://i.imgur.com/)
+
+![](https://i.imgur.com/)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Dart <br>
+**Framework**: Flutter <br>
+Baixe o arquivo .apk presente na seção release em um aparelho Android para rodar a aplicação em seu dispositivo móvel ou acesse o link para usar a versão Web
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+A partir da tela inicial:
+- Clique no botão circular inferior para acessar a tela de adição de pedido.
+- Na tela de adição de pedido você deve preencher os campos de título, Duração e Prazo de Entrega com dados válidos e clicar em Enviar.
+- Após clicar em enviar sua encomenda ficará registrada na tela principal, e já vai aparecer ordenada de modo a minimizar o atraso máximo.
+- Nessa tela você também poderá ver outras informação relevantes como o quanto a encomenda será atrasada ou adiantada, horário de Início e horário de Término.
+- Você também pode deletar uma encomenda na tela principal segurando e arrastando para esquerda ou para direita no card da encomenda que deseja deletar.
 
 
 
