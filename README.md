@@ -1,7 +1,7 @@
 # Piece of Cake
 
 **Número da Lista**: 3<br>
-**Conteúdo da Disciplina**: Greedbr>
+**Conteúdo da Disciplina**: Greed<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -18,6 +18,12 @@ O Piece of Cake é uma aplicação Mobile e Web que tem como objetivo organizar 
 ![](https://i.imgur.com/3kZJf5f.jpg)
 ![](https://i.imgur.com/ywKy31W.png)
 ![](https://i.imgur.com/CJgk8wo.png)
+
+## Vídeo
+
+[![Video](https://img.youtube.com/vi/Iw-MHOkxcLU/0.jpg)](https://www.youtube.com/watch?v=Iw-MHOkxcLU)
+
+> https://www.youtube.com/watch?v=Iw-MHOkxcLU
 
 ## Instalação 
 **Linguagem**: Dart <br>
